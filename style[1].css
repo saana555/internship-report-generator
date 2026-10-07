@@ -1,0 +1,19 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef1f5;color:#222}
+.app-header{position:sticky;top:0;z-index:10;background:#172033;color:#fff;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:0 2px 8px #0002}
+.app-header h1{margin:0 0 5px;font-size:22px}.app-header p{margin:0;font-size:13px;opacity:.85}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{border:0;border-radius:6px;padding:10px 14px;background:#fff;color:#172033;font-weight:700;cursor:pointer}.actions .secondary{background:#d8dde6}
+.workspace{display:grid;grid-template-columns:390px 1fr;gap:18px;max-width:1500px;margin:auto;padding:18px}
+.editor{background:#fff;border-radius:10px;padding:20px;box-shadow:0 2px 10px #0001;max-height:calc(100vh - 110px);overflow:auto}
+.editor h2{margin-top:0}.section-title{font-weight:700;margin:20px 0 10px;padding-bottom:6px;border-bottom:2px solid #172033;color:#172033}
+label{display:block;font-size:13px;font-weight:700;margin:10px 0}input,textarea{display:block;width:100%;margin-top:5px;border:1px solid #cbd2dc;border-radius:5px;padding:9px;font:inherit;font-weight:400}textarea{min-height:95px;resize:vertical}
+.preview-panel{min-width:0}.preview-toolbar{background:#fff;padding:12px 16px;border-radius:8px;margin-bottom:10px;display:flex;justify-content:space-between;gap:10px;font-size:13px}.preview-toolbar span{color:#666}
+.report{background:#cfd3d8;padding:25px;overflow:auto}
+.page{width:210mm;min-height:297mm;margin:0 auto 20px;background:#fff;padding:25mm 22mm 22mm;position:relative;box-shadow:0 2px 12px #0002;page-break-after:always}
+.cover{text-align:center;display:flex;flex-direction:column;align-items:center}.cover .logo{width:80px;height:80px;object-fit:contain;margin-bottom:10px}.college{font-size:18px;font-weight:700;line-height:1.4}.dept{font-size:15px;font-weight:700;line-height:1.35}.report-type{font-size:22px;font-weight:700;margin-top:30px}.on{font-size:15px;margin:12px}.topic{font-size:20px;font-weight:700;text-transform:uppercase;max-width:160mm}.submitted{margin-top:30px;font-size:14px}.student{font-size:18px;font-weight:700;margin:8px}.footer{position:absolute;bottom:12mm;left:22mm;right:22mm;text-align:center;font-size:10px;color:#555;border-top:1px solid #ddd;padding-top:5px}
+h2.page-title{text-align:center;font-size:20px;margin:0 0 24px;text-transform:uppercase}h3{font-size:16px;text-transform:uppercase;margin-top:24px}p{font-size:13px;line-height:1.65;text-align:justify}.meta{text-align:center;line-height:1.7}.signature-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-top:90px;text-align:center;font-size:12px}.signature-grid div{border-top:1px solid #333;padding-top:7px}.toc div{display:flex;justify-content:space-between;border-bottom:1px dotted #888;padding:7px 0;font-size:13px}.small-note{font-size:11px;color:#666}
+@media(max-width:900px){.workspace{grid-template-columns:1fr}.editor{max-height:none}.app-header{position:static;flex-direction:column;align-items:flex-start}}
+@media print{
+  body{background:#fff}.app-header,.editor,.preview-toolbar{display:none!important}.workspace{display:block;padding:0}.preview-panel{width:auto}.report{padding:0;background:#fff}.page{margin:0;box-shadow:none}
+  @page{size:A4;margin:0}
+}

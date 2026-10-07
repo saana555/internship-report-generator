@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Report Generator - GPTC Kalamassery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>Internship Report Generator</h1>
+      <p>Government Polytechnic College, Kalamassery · ECE</p>
+    </div>
+    <div class="actions">
+      <button id="previewBtn">Preview Report</button>
+      <button id="printBtn">Print / Save as PDF</button>
+      <button class="secondary" id="resetBtn">Reset</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="editor">
+      <h2>Enter Internship Details</h2>
+
+      <div class="section-title">Student Details</div>
+      <label>Student Name<input id="studentName" value="Minha Fathima PI"></label>
+      <label>Register Number<input id="regNo" value="2301040000"></label>
+      <label>Department<input id="department" value="Electronics and Communication Engineering"></label>
+      <label>Semester<input id="semester" value="Fifth Semester"></label>
+      <label>Academic Year<input id="academicYear" value="2026 – 2027"></label>
+
+      <div class="section-title">Internship Details</div>
+      <label>Internship Title<input id="internshipTitle" value="AI Driven IoT & Embedded Systems"></label>
+      <label>Organization / Company<input id="organization" value="Model Finishing School, Kochi"></label>
+      <label>Location<input id="location" value="Kochi, Kerala"></label>
+      <label>Duration<input id="duration" value="4 Weeks"></label>
+      <label>Internship Dates<input id="dates" value="June 2026 – July 2026"></label>
+      <label>Industry Supervisor<input id="supervisor" value="Industry Supervisor"></label>
+      <label>Faculty Coordinator<input id="faculty" value="Faculty Coordinator"></label>
+
+      <div class="section-title">Report Content</div>
+      <label>Abstract<textarea id="abstract">This report presents the work and learning experiences gained during the internship in AI driven IoT and embedded systems. The internship provided practical exposure to Arduino, Raspberry Pi, ESP32, sensors, actuators, LCD interfacing, Bluetooth communication and basic embedded programming.</textarea></label>
+      <label>Introduction<textarea id="intro">The internship was undertaken to gain practical knowledge of embedded systems and Internet of Things technologies. It helped bridge the gap between classroom concepts and practical implementation through hands-on activities and mini projects.</textarea></label>
+      <label>Organization Profile<textarea id="organizationProfile">Model Finishing School, Kochi provides technical and skill-oriented training that supports practical learning and industry readiness.</textarea></label>
+      <label>Training / Work Carried Out<textarea id="work">During the internship, practical exercises were carried out using Arduino, Raspberry Pi and ESP32. Activities included LED blinking, IR obstacle detection, LCD interfacing, ultrasonic distance measurement, servo control and Bluetooth-based communication.</textarea></label>
+      <label>Skills and Learning Outcomes<textarea id="learning">The internship improved practical skills in embedded programming, sensor interfacing, microcontroller development, debugging, circuit connections and basic IoT concepts. It also improved problem-solving and project implementation skills.</textarea></label>
+      <label>Conclusion<textarea id="conclusion">The internship was useful in developing practical knowledge of IoT and embedded systems. The hands-on training provided a better understanding of how sensors, controllers and communication modules are combined to build real-world systems.</textarea></label>
+      <label>References<textarea id="references">[1] Arduino Documentation.
+[2] Espressif ESP32 Documentation.
+[3] Raspberry Pi Documentation.</textarea></label>
+
+      <div class="section-title">Optional Images</div>
+      <label>College Logo / Seal<input type="file" id="logoInput" accept="image/*"></label>
+      <label>Internship / Organization Image<input type="file" id="internshipImageInput" accept="image/*"></label>
+    </section>
+
+    <section class="preview-panel">
+      <div class="preview-toolbar">
+        <strong>Live Preview</strong>
+        <span>Changes are saved automatically in this browser.</span>
+      </div>
+      <div id="report" class="report"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
